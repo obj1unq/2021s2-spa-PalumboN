@@ -15,6 +15,11 @@ object olivia {
 	method gradoDeConcentracion() {
 		return gradoDeConcentracion
 	}
+	
+	method darseUnBanioDeVapor() {
+		// No hace nada apropósito
+		// Sirve para que Olivia sea polimórfica con el resto de las personas (para el Spa)
+	}
 }
 
 
@@ -56,7 +61,7 @@ object bruno {
 
 object ramiro {
 	var nivelDeContractura = 5
-	var pielGrasosa = false
+	var pielGrasosa = true
 	
 	method recibirMasajes() { 
 //		OPCION 1
