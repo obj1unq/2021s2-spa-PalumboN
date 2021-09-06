@@ -55,14 +55,46 @@ object bruno {
 }
 
 object ramiro {
-	method recibirMasajes() { /*... completar ...*/ }
-	method darseUnBanioDeVapor() { /*... completar ...*/ }
-	method comerseUnBigMac() { /*... completar ...*/ }
-	method bajarALaFosa() { /*... completar ...*/ }
-	method jugarAlPaddle() { /*... completar ...*/ }
+	var nivelDeContractura = 5
+	var pielGrasosa = false
+	
+	method recibirMasajes() { 
+//		OPCION 1
+//		if (nivelDeContractura > 1) {			
+//			nivelDeContractura -= 2
+//		} else {
+//			nivelDeContractura = 0
+//		}
+
+//		OPCION 2
+//		nivelDeContractura -= 2
+//		if (nivelDeContractura < 0) {
+//			nivelDeContractura = 0
+//		}
+
+//		OPCION 3
+		nivelDeContractura = 0.max(nivelDeContractura - 2)
+	}
+	
+	method darseUnBanioDeVapor() {
+		pielGrasosa = false 
+	}
+	
+	method comerseUnBigMac() {
+		pielGrasosa = true 
+	}
+	method bajarALaFosa() { 
+		pielGrasosa = true
+		nivelDeContractura += 1
+	}
+	method jugarAlPaddle() { 
+		nivelDeContractura += 3
+	}
 	
 	method diaDeTrabajo() { 
-		/*... completar ...*/
+		self.bajarALaFosa()
+		self.comerseUnBigMac()
+		self.bajarALaFosa()
 	}
 }
 
