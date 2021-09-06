@@ -1,6 +1,22 @@
 
 object olivia {
+	var gradoDeConcentracion = 6
+	
+	method recibirMasajes() {
+		gradoDeConcentracion = gradoDeConcentracion + 3
+//		gradoDeConcentracion += 3
+	}
+	
+	method discutir() {
+		gradoDeConcentracion = gradoDeConcentracion - 1
+//		gradoDeConcentracion -= 1
+	}
+	
+	method gradoDeConcentracion() {
+		return gradoDeConcentracion
+	}
 }
+
 
 
 object bruno {
